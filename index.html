@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Volume-meter by cabe56</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Volume-meter</h1>
+        <p>Simple example of implementing a clip-detecting volume meter in Web Audio.</p>
+
+        <p class="view"><a href="https://github.com/cabe56/volume-meter">View the Project on GitHub <small>cabe56/volume-meter</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/cabe56/volume-meter/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/cabe56/volume-meter/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/cabe56/volume-meter">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="simple-volume-meter" class="anchor" href="#simple-volume-meter" aria-hidden="true"><span class="octicon octicon-link"></span></a>Simple volume meter</h1>
+
+<p>I whipped this app up to show a basic volume meter on live audio input.  It does both clip detection and RMS volume.</p>
+
+<p>A "volume" meter can mean many things; if you want to do clip detection, you really need to access every sample.  If you don't need clip detection, I might suggest using an Analyser and getByteTimeDomainData, since it will likely have lower CPU overhead.  Note that it is CRITICALLY IMPORTANT to disassociate visual rendering (in the requestAnimationFrame loop) from the onaudioprocess function - you do NOT want to trigger a relayout from inside your audio handler, or it may glitch or cause other issues.</p>
+
+<p>It's also hosted at <a href="http://webaudiodemos.appspot.com/volume-meter/">http://webaudiodemos.appspot.com/volume-meter/</a>.</p>
+
+<p>Check it out, feel free to fork, submit pull requests, etc.  MIT-Licensed - party on.</p>
+
+<p>-Chris</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/cabe56">cabe56</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
